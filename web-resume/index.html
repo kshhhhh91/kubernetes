@@ -1,0 +1,780 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Sehyun Kwon</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="0b6a0730-10eb-4b01-a55a-d63e72b4b15d" class="page sans"><header><img class="page-cover-image" src="Sehyun%20Kwon%200b6a073010eb4b01a55ad63e72b4b15d/%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2022-10-19_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_4.45.53.png" style="object-position:center 92.32000000000001%"/><div class="page-header-icon page-header-icon-with-cover"><img class="icon" src="Sehyun%20Kwon%200b6a073010eb4b01a55ad63e72b4b15d/%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2023-02-27_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_12.16.46.png"/></div><h1 class="page-title">Sehyun Kwon</h1></header><div class="page-body"><h3 id="747c2c5c-7369-4679-bcce-7a9cee53a533" class="">Cloud Engineer</h3><p id="ae9c1545-abd4-4c6c-ac57-847c588e438c" class=""><mark class="highlight-gray">안녕하세요, 요트를 즐겨타며 세상을 발전시키는 모든 기술에 호기심과 도전의식을 가지는 클라우드 엔지니어 지망생 </mark><strong>권세현</strong><mark class="highlight-gray">입니다.
+5년 전 비영리단체 창업 경험 이후 IT 업계 및 개발에 흥미가 생겼고, 군 제대 이후 인공지능 부트캠프를 통해 공부를 시작했습니다.
+공부 중 AI 모델 학습 및 배포 과정 등을 통해 오픈소스와 클라우드 및 인프라 지식에 대한 필요성을 느꼈고, 가장 매력이 있는 클라우드 분야에 관심이 생겨 또 한번 도전해보고자 합니다.</mark></p><p id="637e4ec7-e3b6-4ba3-805c-f92a6d53e9fd" class="">
+</p><hr id="b55521bf-f495-49dd-97b4-14184f2a7d7d"/><p id="527c23cb-0cae-4882-aaa7-994da2f19d24" class="">
+</p><h2 id="af246781-646f-4b21-ab2b-6430b135d5fc" class="block-color-blue_background"> Contact.</h2><p id="ec1106df-3d08-4800-a0f7-25d54fa75770" class="">
+Call : 010.4448.7578</p><p id="1203743e-e18f-473c-9062-4922211a6236" class="">Email : kshhhhh91@naver.com</p><p id="d1b21bbf-9538-44ee-8f53-33aea87c79b5" class="">GitHub : <a href="https://github.com/kshhhhh91">https://github.com/kshhhhh91</a></p><p id="216ab74a-5890-47c9-9ab5-893feb185b2c" class="">Address : 서울특별시 송파구 잠실2동</p><p id="6d135474-60bd-43e9-aebc-828d4ae25bb4" class="">
+</p><p id="67603d35-217b-4c22-a441-79ca5acdcbdc" class="">
+</p><p id="8bfc9938-827f-42b2-b2fa-c8d9019d477b" class="">
+</p><hr id="06677df8-2292-4e62-9155-e27dae680b15"/><p id="61d8395a-d9c3-40a9-b821-4b3dcf7bbcf3" class="">
+</p><h2 id="7d337fdd-2bcf-4d54-812d-eb5e06ed303c" class="block-color-blue_background"> Education.</h2><div id="0948ed82-5da7-4375-a878-0ef716ffce06" class="column-list"><div id="451c33bd-d02f-4a82-88d8-b6951247b466" style="width:37.5%" class="column"><p id="c7bfd529-8560-43b3-80d4-eb54cf4869ad" class="">2011.03 - 2018.02
+
+
+2007.03 - 2010.02</p><p id="a5cb4e77-3405-4808-9b6c-ba83ebad9910" class="">
+</p></div><div id="7bbe0c77-0f1c-4acd-9b47-4e953cd82c2d" style="width:118.75%" class="column"><p id="2278fed0-7f94-452d-8380-53bc9ec12314" class=""><strong>연세대학교</strong> 사학과 졸업
+(부전공 : 경영학, 학점 : 3.36 / 4.5)
+
+<strong>대원외국어고등학교</strong> 스페인어과 졸업</p><p id="4f5c1fda-4a36-40a0-92b1-8afcefe81cec" class="">
+</p></div></div><hr id="588de92d-505f-450a-8d87-f40b02b24580"/><p id="f184dbd4-1c20-47cc-bd42-413d1ba38a11" class="">
+</p><h2 id="e2d83636-2732-4d4e-bb74-9ab79ce89abf" class="block-color-blue_background"> Project.</h2><p id="46f285ba-4b69-4c75-82d9-c97bb9061633" class="">
+</p><div id="3683568d-b240-42fb-9293-ad09994aaac0" class="column-list"><div id="1ed35f1f-7c30-48e3-b6e3-5f337ec28a90" style="width:31.25%" class="column"><p id="ea31f7b5-4bfd-4829-9a7a-88a61ca0be67" class="">2022.05 - 2022.06
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2022.04
+
+
+
+
+
+
+
+
+
+
+
+
+2022.03
+</p></div><div id="e9185fb8-aac3-4f6e-a8e1-346102479e30" style="width:112.5%" class="column"><p id="fe62a2b3-0be4-43cb-9c05-f6c43d360826" class=""><strong>Synstealer Project (</strong>팀 프로젝트 / 딥러닝, Object Detection)</p><ul id="3788115f-c1ce-44df-9db3-b915f929eeb8" class="bulleted-list"><li style="list-style-type:disc"><strong>합성데이터(Synthetic Data)를 이용한 객체 탐지 모델의 성능 향상을 위한 연구형 프로젝트</strong></li></ul><ul id="dd8e23fd-4b4d-45df-a521-5fb29d50b3e3" class="bulleted-list"><li style="list-style-type:disc">참여인원 : 3명</li></ul><ul id="5279ba3a-18cd-412b-a01f-d7fecb544f4e" class="bulleted-list"><li style="list-style-type:disc">주제 및 내용 <ul id="3f94e22d-6430-4a10-9634-3639916f75f0" class="bulleted-list"><li style="list-style-type:circle">자율주행 분야에서 기존 객체탐지 모델이 멀리 떨어져 있는 객체나 가려져 있는 객체를 잘 식별하지 못하는 현상을 해결하기 위해, 합성데이터를 이용하여 모델의 성능을 높이는 방법에 대한 실험 연구형 프로젝트를 진행. </li></ul><ul id="1dc9f9a0-0969-405e-880c-2a98346cd6b4" class="bulleted-list"><li style="list-style-type:circle">Naver에서 배포한 오픈소스인 합성데이터 VKITTI2와 실제데이터 KITTI dataset을 다양하게 조합해보고, 가려진 객체에 대해 Bounding Box를 다양하게 재설정하거나 여러 가림비율에 따라 학습 데이터셋에 변화를 주어가며 최적의 성능을 만들어내는 방법을 찾기 위해 노력함. </li></ul><ul id="12dc5e2e-5e89-4f83-a487-9a3e914f170c" class="bulleted-list"><li style="list-style-type:circle">여러 오픈소스 모델 중 One-stage Detector인 RetinaNet, 그리고 그것을 발전시킨 EfficientDet, Two-stage Detector인 YOLOv5와 같은 세 가지 모델 학습에 대한 평가지표로 mAP와 더불어 팀에서 새롭게 생성해낸 지표를 사용, 소형객체와 가림비율이 높은 객체들이 많이 포함된 합성데이터셋을 생성해야 한다는 결론에 도달함.</li></ul></li></ul><ul id="554cb2c6-d6f1-4426-b576-fb58b746c83d" class="bulleted-list"><li style="list-style-type:disc">맡은 역할 : 데이터 수집, GCP 환경 구축, 모델 리서치 및 학습</li></ul><ul id="76972a36-33b2-4a0e-a819-16b6ef859f25" class="bulleted-list"><li style="list-style-type:disc">기술 스택 : Python, Tensorflow, Pytorch, Linux, GCP(Google Cloud Platform)</li></ul><ul id="23230292-cdec-483e-ac19-b574159fac38" class="bulleted-list"><li style="list-style-type:disc">https://github.com/Syn-stealer/Hackathon
+</li></ul><hr id="217ce4c2-0a14-4a22-8c98-8d43f7e28ece"/><p id="073dbf7d-5740-47b7-8dca-4179dda08db0" class="">
+<strong>자율주행 보조시스템 만들기</strong> (개인 프로젝트 / 딥러닝, Object Detection)</p><ul id="d9e05a25-6ddc-486e-ade4-b9eff6156174" class="bulleted-list"><li style="list-style-type:disc">주제 및 내용<ul id="336c51f9-9007-4db0-a623-cf0faae92662" class="bulleted-list"><li style="list-style-type:circle">KITTI Dataset을 이용하여 Object Detection 오픈소스 모델을 활용, 이미지 상에서 전방에 사람이 감지되거나 일정 크기(width/height 기준 300px) 이상의 차량이 감지되면 “STOP”을 출력하고, 감지되지 않으면 “GO”를 출력하는 시스템을 함수형 프로그래밍을 이용하여 만듦.</li></ul></li></ul><ul id="4cdbf23a-e31c-40e3-b0b4-e572a68113ed" class="bulleted-list"><li style="list-style-type:disc">기술 스택 : Python, Tensorflow</li></ul><ul id="ec45bc64-4420-40ff-b52c-5645dd7c3dce" class="bulleted-list"><li style="list-style-type:disc">https://github.com/kshhhhh91/Aiffel/blob/main/GoingDeeper/GD04/%5BG_04%5DObjectDetection.ipynb</li></ul><p id="e360902b-dba4-4917-a0ca-5e4f5b8a8855" class="">
+</p><hr id="bdb51ad3-02ea-4664-b068-f49f225684f3"/><p id="8d3fb18e-7e7b-4609-9224-a68db9b4e66b" class="">
+</p><p id="c1121418-7740-48ea-b20c-ffd2656b7f12" class=""><strong>폐렴 진단 모델 성능 개선 프로젝트 </strong>(개인 프로젝트 / 딥러닝)</p><ul id="e551e3f4-37b5-4052-bc1e-c7903c0f75b6" class="bulleted-list"><li style="list-style-type:disc">주제 및 내용<ul id="2c820ccb-6061-4390-b603-f250eb12b60f" class="bulleted-list"><li style="list-style-type:circle">오픈소스로 제공된 X-Ray 폐 사진으로 폐렴 여부를 판단하는 Convolutional Neural Network로 만들어진 모델의 성능을 개선하는 방법을 여러 실험을 통해 도출해냄.</li></ul><ul id="1c6a0e21-d6e0-4634-961b-5532c542c3ff" class="bulleted-list"><li style="list-style-type:circle">Data Augmentation(좌우 반전), Batch Normalization 계층 추가, Dropout 비율 조정, Class imbalance 해소(Class Weight 재조정) 등을 시도하였고, 미세한 수준으로 성능이 올라감.</li></ul><ul id="0b4e294c-978e-4b2c-a755-1e61e3d4444a" class="bulleted-list"><li style="list-style-type:circle">마지막으로 Keras의 ImageDataGenerator를 이용, Augmentation을 정교하게 설정해주었고 모델의 accuracy를 83%에서 87%, precision을 80%에서 84%로 개선함.</li></ul></li></ul><ul id="59837513-2f66-4d5d-a532-41907cc086ba" class="bulleted-list"><li style="list-style-type:disc">기술 스택 : Python, Tensorflow, Keras</li></ul><ul id="796bce91-3aa1-47e0-a761-9bc6447a4f4f" class="bulleted-list"><li style="list-style-type:disc">https://github.com/kshhhhh91/Aiffel/blob/main/Exploration/Ex09/%5BE_09%5DPneumonia.ipynb</li></ul></div></div><p id="76901c94-78ce-4aa2-804d-f3f021915363" class="">
+</p><hr id="5c80e61e-faff-4ba8-bb52-dc375685b39d"/><p id="0273bbe1-6639-481e-8cbf-f0b6c2d98d5a" class="">
+</p><h2 id="80a558e2-53c7-4779-b652-be943c5c0533" class="block-color-blue_background"> Activity. (Dev)</h2><p id="3bf5d9d3-55fa-4a5b-b0a4-feb27da501db" class="">
+</p><div id="e80a54a4-aecc-43f4-8a84-d2da0e44d4bb" class="column-list"><div id="4b6a83a7-e380-407c-ace9-3650ae593a76" style="width:31.25%" class="column"><p id="a085bc2e-2b43-4fa1-bb64-1393a5dd4a28" class="">2021.12 - 2022.06
+
+
+
+
+
+
+</p></div><div id="2f852ccb-c734-4630-bcaf-360bb20c5b0a" style="width:118.75%" class="column"><p id="38a15ba9-f3ae-410e-a199-b4032e390739" class=""><strong>Aiffel 인공지능 부트캠프</strong>, 교육 수강 / 개발</p><ul id="132d2cbe-99cf-4d90-b9ba-ffd64df63c88" class="bulleted-list"><li style="list-style-type:disc">모두의연구소에서 주관한<strong>Aiffel 양재 캠퍼스 2기 졸업</strong></li></ul><ul id="687df2cc-ba59-4a9c-afc6-8c6bfa0775c3" class="bulleted-list"><li style="list-style-type:disc">CV, NLP, Recsys 기본 모델 및 tensorflow, pytorch, sklearn 공부</li></ul><ul id="f2c5a1ce-8efa-4869-8aac-9cab5a92c607" class="bulleted-list"><li style="list-style-type:disc">Datathon) Netflix Dataset을 이용한 데이터 분석 및 시각화 팀 프로젝트 진행 (2022. 03. 08 ~ 2022. 03. 11)</li></ul><ul id="cbf1f329-73d0-4f47-81fd-5e02bc75fd09" class="bulleted-list"><li style="list-style-type:disc">Aiffelthon) 여러 오픈소스인 합성데이터와 객체 탐지 모델들을 활용하여 성능 향상을 위한 연구형 팀 프로젝트 진행 (2022. 05. 03 ~ 2022. 06. 09)</li></ul><p id="059088eb-28e2-4a5a-9f2b-a37e09aa7671" class="">
+</p></div></div><p id="31a65bf6-1946-4ab4-9076-bc6e46d6f229" class="">
+</p><hr id="6c6e11d1-538e-49f6-951b-cdc2963f4b81"/><p id="2dceb56d-84eb-456e-8fbd-0f5772ed9b7c" class="">
+</p><h2 id="dfad21a1-992a-4318-bca7-4e6a585d7a35" class="block-color-blue_background"> Activity. (Non-Dev)</h2><p id="f690b373-a6d8-4a63-a547-c00a66b6b19b" class="">
+</p><div id="940e743b-ebd9-45f7-98b7-82aaab00c6e5" class="column-list"><div id="0ba1064b-c5b5-441b-93de-8971b2cec11b" style="width:37.5%" class="column"><p id="baf7ba89-2c82-4229-992a-aa4b25e032c8" class="">2016.03 - 2018.08
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2011.03 - 2015.12</p></div><div id="614340d2-8200-4180-8622-3a617f49a03c" style="width:112.5%" class="column"><p id="e12acfae-0803-443e-9945-9346d3980492" class=""><strong>미디어봉사동아리 리듬오브호프</strong>, 교내(연합) / 봉사, 콘텐츠 제작</p><ul id="bbe355aa-8bcf-4e82-a583-dd07f562332a" class="bulleted-list"><li style="list-style-type:disc">리듬오브호프 동아리 운영진</li></ul><ul id="2f65ca4a-de36-479c-aaa2-b8a0648f036c" class="bulleted-list"><li style="list-style-type:disc">소외계층 위한 후원콘텐츠 제작 통해 온라인 모금함 개설</li></ul><ul id="2e6e43a4-ec04-43cb-b4b4-07f60e49052b" class="bulleted-list"><li style="list-style-type:disc">부회장으로 활동하며 총 22개 사례 운영, 1억 7,800만원의 기부금과 60,721명의 후원자 유치</li></ul><ul id="76057daa-4d0e-425e-842f-3809cd9982f3" class="bulleted-list"><li style="list-style-type:disc">영상 촬영, 편집, 시나리오, 작곡, 포스터 제작 등 전 과정 직접 참여 및 크루 교육 담당</li></ul><ul id="3bcc99a8-9631-417b-b3a2-5327ac0949e5" class="bulleted-list"><li style="list-style-type:disc">모금액 배분을 직접 진행할 수 있는 비영리법인으로 발전시키기 위한 설립과정 참여</li></ul><ul id="d73a924a-ee43-4077-b48f-47ba9b484748" class="bulleted-list"><li style="list-style-type:disc">참여 사례 예시 https://happybean.naver.com/donations/H000000145904?redirectYN=N&amp;p=p&amp;s=rsch</li></ul><hr id="917c4f95-9e44-404c-9a68-c4430a2dfb91"/><p id="eee1acff-4b63-4dd7-aa71-793fbbf1c6e5" class=""><strong>교내 요트 동아리 활동</strong> 멤버 </p><ul id="6928a2d3-9c46-427d-9d5f-2bd5c94617ee" class="bulleted-list"><li style="list-style-type:disc">연세요트연구회 32기</li></ul><ul id="b1b30c18-3bc0-48be-b7cc-42ca6d4f0bbb" class="bulleted-list"><li style="list-style-type:disc">레이싱 요트 (Raser, 470, keelboat) 훈련 수료 및 동아리 운영</li></ul><ul id="12c176e7-ce9d-4141-b5c3-1f5306af27b1" class="bulleted-list"><li style="list-style-type:disc">각종 대학생 및 일반인 요트 대회 참여, 수상</li></ul><ul id="74181ed3-1eb8-4eb4-90f5-25d28d2b514b" class="bulleted-list"><li style="list-style-type:disc">졸업 후 지속되는 OB활동을 통해 주기적인 요트 세일링, 다양한 선배들과 인적 네트워크 형성</li></ul></div></div><p id="3920a6ad-f7a7-4142-a4fc-f99ba73ba34d" class="">
+</p><hr id="6fd3cad2-6b3e-4b81-b464-b35251ce0c47"/><p id="60ca1e99-8b4b-40b3-a5dd-d45505d1660c" class="">
+</p><h2 id="1efe4d3e-9697-4076-a8d9-8f2044149db1" class="block-color-blue_background"> Work Experience.</h2><p id="6ebbff48-91f1-4170-83b6-b105ccc77268" class="">
+</p><div id="562f8fc7-9b61-4690-a697-bd60e42b7b81" class="column-list"><div id="73801c44-9133-499a-a50c-4a657c0a0657" style="width:31.25%" class="column"><p id="29578176-20c5-4cb3-94c3-94d839e47e4f" class="">2017.09 - 2018.08</p></div><div id="1ab2cfa4-1b52-420c-8a6d-712091360feb" style="width:112.5%" class="column"><p id="229046b2-4468-46fe-92da-250377212c26" class=""><strong>비영리단체 리듬오브호프 (현 사단법인 리듬)</strong>, 창립 멤버</p><ul id="b074ae0c-a344-4658-a457-4b1ccdfde4c7" class="bulleted-list"><li style="list-style-type:disc">비영리법인 설립 과정 참여</li></ul><ul id="98977282-3f19-4422-badd-cddbbc825c34" class="bulleted-list"><li style="list-style-type:disc">사업계획서 작성 및 정부지원 관련 업무</li></ul><ul id="2c9c4f35-3925-42c0-8932-4d3f5a1cd483" class="bulleted-list"><li style="list-style-type:disc">비영리단체로서의 효율적 내부 시스템 구축</li></ul><ul id="7480eee6-c29f-4156-9642-b68ae94e8bc4" class="bulleted-list"><li style="list-style-type:disc">자체 복지사업과 모금액 직접 배분 시스템 연구</li></ul><ul id="306bf0c3-8418-45e4-b706-69725d9d81a2" class="bulleted-list"><li style="list-style-type:disc">기존 네이버 해피빈에만 진행하던 모금을 카카오 같이가치와의 협업으로도 확장, 후원자 평균 17배 증가, 모금액 평균 3.2배 증가시키는 성과 달성</li></ul><ul id="b2f88fb4-9183-46af-9195-8db3b45fe451" class="bulleted-list"><li style="list-style-type:disc">사랑의열매, 구세군 과의 소외계층 사례 발굴 직접 제휴 진행</li></ul><ul id="835350cd-d61b-4661-a669-31c0ed902105" class="bulleted-list"><li style="list-style-type:disc">신한은행, 효성 등 대기업의 후원 참여 논의 담당</li></ul><ul id="90edace3-0bce-47e3-b3f2-c13aca9ae8bd" class="bulleted-list"><li style="list-style-type:disc">법인 설립 이후 홈페이지 개설이나 모금 시스템 연구 등을 통해 개발 분야 공부에 대한 흥미가 생기게 됨.
+</li></ul></div></div><hr id="a205da4d-5e26-4194-aa59-0393f0254c68"/><p id="2d1e0e9f-b9de-4a00-8b3f-c69dd2c89d43" class="">
+</p><h2 id="643f25dc-232e-4d18-b536-e7ff52a45b4e" class="block-color-blue_background"> Skills.</h2><p id="1beee2bf-afc7-4478-aa9e-b27e93074c0a" class="">
+</p><ul id="41c45975-c0ac-49a3-a17b-bc2937ca0701" class="bulleted-list"><li style="list-style-type:disc"><strong>Python</strong>을 바탕으로<strong> Tensorflow, Keras, Pytorch </strong>를 공부하여 프로젝트에서 활용함.</li></ul><ul id="ac6beb1c-9282-400a-8ae2-96e2ff0ad787" class="bulleted-list"><li style="list-style-type:disc"><strong>Linux, GCP(Google Cloud Platform), Wandb </strong>의 기본적인 활용법을 알고 프로젝트에 이용함.<strong></strong></li></ul><ul id="103f9ff2-5fbc-4869-90cf-586ef774420d" class="bulleted-list"><li style="list-style-type:disc"><strong>Git, GitHub, Slack, Discord, Notion </strong>을 이용하여 프로젝트 협업에 참여함.</li></ul><ul id="36f282cc-16ad-47b5-837e-807362ce164f" class="bulleted-list"><li style="list-style-type:disc">그 밖에, HTML5, CSS3, JavaScript(ES6), AWS EC2 를 공부하여 실습에 이용해본 경험이 있음.</li></ul><p id="1d103030-aaa1-432a-86cf-5a5579f8ea6a" class="">
+</p><p id="a7c1d732-08eb-4a0e-a54c-92cf16a8ca73" class="">
+</p><hr id="c39a3c2d-2414-41fa-a419-57749ff453af"/><p id="3bde5331-79a2-477d-821e-ad72064b925b" class="">
+</p><h2 id="aa65218c-d3a1-490d-b155-4995d3cb03fc" class="block-color-blue_background"> Certification.</h2><div id="d677f5d6-6171-4f0e-b4c1-092f6c57da59" class="column-list"><div id="57397b9a-f69c-4c79-8f14-6d9490d2ce81" style="width:18.75%" class="column"><p id="af1a37d9-925a-4ba0-af92-5bc45054052a" class="">2022.09</p></div><div id="f4e41e60-7b85-4207-bc3b-237d3704eb9a" style="width:112.5%" class="column"><p id="756b985a-ddbe-499a-8421-26cf8399a075" class="">ADsP (Advanced Data Analytics Semi-Professional)
+데이터분석 준전문가
+</p></div></div><hr id="52bc895b-40f8-4cfa-8be0-81fcf6fb0712"/><p id="b3e3ae54-76e7-404c-b0ac-5f4855dfbee1" class="">
+</p><h2 id="f083b227-0fd0-4142-bd03-7c3c9f47b94d" class="block-color-blue_background"> Others.</h2><p id="f4f8ecb4-0e8d-4188-8ce5-1186b0946d8e" class="">
+</p><div id="abbf3d3e-5390-475e-8456-5fa48144608c" class="column-list"><div id="0f1fd735-1660-4d89-96f3-d96fb452bd1e" style="width:31.25%" class="column"><p id="89384dbf-821e-42cb-8741-96f006cb50f8" class=""><strong>Foreign Language
+</strong>
+<strong>
+Hobby</strong></p></div><div id="d4450070-3798-41e9-b765-d092ab85039b" style="width:87.5%" class="column"><p id="5ad64bf9-3e85-43da-a676-6e75279cb6b0" class="">  스페인어 : DELE B1 취득, 일상회화 가능
+
+
+  요트 세일링, 테니스, 수영</p><p id="f0b6eab6-de27-423f-a722-c1ac5806fc7d" class="">
+</p></div></div><p id="3b5e471a-0423-4ead-8c08-7352dbc949a2" class="">
+</p></div></article></body></html>
